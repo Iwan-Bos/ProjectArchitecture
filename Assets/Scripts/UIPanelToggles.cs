@@ -16,6 +16,9 @@ public class UIPanelToggles : MonoBehaviour {
         CreditsPanel.SetActive(false);
     }
     // UI Toggles;
+    public void OpenMainPanel() {
+        MainPanel.SetActive(true);
+    }
     public void OpenOptions() {
         if (OptionsPanel != null) {
             MainPanel.SetActive(false);
