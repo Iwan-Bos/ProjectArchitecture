@@ -15,33 +15,28 @@ public class UIPanelToggles : MonoBehaviour {
         OptionsPanel.SetActive(false);
         CreditsPanel.SetActive(false);
     }
+    
     // UI Toggles;
-    public void OpenMainPanel() {
-        MainPanel.SetActive(true);
-    }
-    public void OpenOptions() {
-        if (OptionsPanel != null) {
-            MainPanel.SetActive(false);
-            OptionsPanel.SetActive(true);
-        }
+    // Main panel
+    public void OpenMainPanel() { MainPanel.SetActive(true); }
+    public void CloseMainPanel() { MainPanel.SetActive(true); }
+     // Options panel
+    public void OpenOptions() {  
+        MainPanel.SetActive(false);
+        OptionsPanel.SetActive(true);
     }
     public void CloseOptions() {
-        if (MainPanel != null) {
             OptionsPanel.SetActive(false);
             MainPanel.SetActive(true);
-        }
     }
+    // Credits panel
     public void OpenCredits() {
-        if (CreditsPanel != null) {
             MainPanel.SetActive(false);
             CreditsPanel.SetActive(true);
-        }
     }
     public void CloseCredits() {
-        if (CreditsPanel != null) {
             CreditsPanel.SetActive(false);
             MainPanel.SetActive(true);
-        }
     }
     
     // Misc UI Functions;
