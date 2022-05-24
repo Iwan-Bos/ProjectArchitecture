@@ -1,2 +1,0 @@
-# ProjectArchitecture
-hoi
