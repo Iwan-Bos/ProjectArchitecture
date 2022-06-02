@@ -22,24 +22,30 @@ public class UIPanelToggles : MonoBehaviour {
         {
             // Weird pause toggle
             if (Input.GetKeyDown("escape")) { 
+
                 if (EscapeToggle) {  
+
                     MainPanel.SetActive(true);
                     Time.timeScale = 0.0f;
+
                     EscapeToggle = false;
-                } else {
+                } 
+                else {
+
                     MainPanel.SetActive(false);
                     OptionsPanel.SetActive(false);
                     CreditsPanel.SetActive(false);
                     Time.timeScale = 1.0f;
+                    
                     EscapeToggle = true;
                 }
+
             }
         }
     }
     
-    // UI Toggles;
+    // UI Toggles ;
     // Main panel
-    // public void OpenMainPanel() { MainPanel.SetActive(true); }
     public void CloseMainPanel() { 
         MainPanel.SetActive(false); 
         EscapeToggle = true;    
@@ -63,18 +69,30 @@ public class UIPanelToggles : MonoBehaviour {
             MainPanel.SetActive(true);
     }
     
-    // Misc UI Functions;
-    public void StartGame() { SceneManager.LoadScene(1); } // Game Scene
+    // Misc UI Functions ;
+    public void StartGame() { 
+
+        SceneManager.LoadScene(1); 
+        // Stop("mainMenuMusic");
+        // Start("gameMusic");
+
+    }
+
     public void QuitGame() { 
+
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
         #else
             Application.Quit();
         #endif
+
     }
+
     public void ReturnToMenu() {
+
         Time.timeScale = 1.0f;
         SceneManager.LoadScene(0);
+
     }
 
 }
