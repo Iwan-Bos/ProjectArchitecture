@@ -18588,7 +18588,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Stephanie Lunshof\nLuna Dijkema\nChristel Korthuis\nJeffrey Huistra\nJurri\xEBn"
+  m_Text: "Stephanie Lunshof\nLuna Dijkema\nChristel Korthuis\nJeffrey Huistra\nJurri\xEBn
+    van Slobbe"
 --- !u!222 &1909707924
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19617,8 +19618,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Daniel Almonte
-
-    Luuk Battjes
 
     Jeuneau Boekhoudt
 

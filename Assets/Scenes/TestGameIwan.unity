@@ -667,8 +667,6 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Daniel Almonte
 
-    Luuk Battjes
-
     Jeuneau Boekhoudt
 
     Iwan Bos'
@@ -1074,6 +1072,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 0b3f4ec3eec703e478b1b81d3890d0ad, type: 2}
   masterSlider: {fileID: 1467276631}
+  UI: {fileID: 0}
 --- !u!1 &221653984
 GameObject:
   m_ObjectHideFlags: 0
@@ -2299,7 +2298,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Stephanie Lunshof\nLuna Dijkema\nChristel Korthuis\nJeffrey Huistra\nJurri\xEBn"
+  m_Text: "Stephanie Lunshof\nLuna Dijkema\nChristel Korthuis\nJeffrey Huistra\nJurri\xEBn
+    van Slobbe"
 --- !u!222 &720007982
 CanvasRenderer:
   m_ObjectHideFlags: 0
