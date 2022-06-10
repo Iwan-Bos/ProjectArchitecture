@@ -16693,7 +16693,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Quit to Main Menu
+  m_Text: Quit
 --- !u!222 &4505398810835184961
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19682,11 +19682,11 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Exclusive FullScreen
+    - m_Text: Exclusive fullscreen
       m_Image: {fileID: 0}
-    - m_Text: FullScreen Window
+    - m_Text: Fullscreen window
       m_Image: {fileID: 0}
-    - m_Text: Maximized Window
+    - m_Text: Maximized window
       m_Image: {fileID: 0}
     - m_Text: Windowed
       m_Image: {fileID: 0}
