@@ -16,10 +16,11 @@ public class PlantPickup : MonoBehaviour
 
 	void OnCollisionEnter(Collision collision)
 	{
-		foreach (ContactPoint contact in collision.contacts)
+		if (col.gameObject.name == "Plant1");
 		{
-			Debug.DrawRay(contact.point, contact.normal, Color.white);
-		}
+			Carry();
+		}	
+		
 	}
 
 	// Update is called once per frame
