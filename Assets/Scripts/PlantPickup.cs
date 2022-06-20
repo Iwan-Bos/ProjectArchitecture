@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,29 +6,31 @@ using UnityEngine;
 public class PlantPickup : MonoBehaviour
 {
 
+	
 	public GameObject plant1;
-	public GameObject plant2;
+	private bool carrying = false;
 
-	// Start is called before the first frame update
-	void Start()
+
+	private void OnTriggerEnter(Collider other)
 	{
-
-	}
-
-	void OnCollisionEnter(Collision collision)
-	{
-		/*
-		if (col.gameObject.name == "Plant1");
+		if (!carrying)
 		{
-			Carry();
-		}	
-		*/
-	}
 
-	// Update is called once per frame
-	void Update()
-	{
+			if (other.CompareTag("Player"))
+			{
+				//carrying coderen voor meer dan 2 planten
 
+				plant1.SetActive(true);
+				carrying = true;
+				Console.WriteLine("You're carrying plant 1.");
+			}
+
+			else
+			{
+				plant1.SetActive(false);
+				Console.WriteLine("You cannot carry more items.");
+			}
+		}
 	}
 }
 
