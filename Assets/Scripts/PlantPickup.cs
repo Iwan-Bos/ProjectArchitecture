@@ -16,11 +16,12 @@ public class PlantPickup : MonoBehaviour
 
 	void OnCollisionEnter(Collision collision)
 	{
+		/*
 		if (col.gameObject.name == "Plant1");
 		{
 			Carry();
 		}	
-		
+		*/
 	}
 
 	// Update is called once per frame
