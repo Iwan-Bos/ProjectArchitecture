@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
-        if(isGrounded && Input.GetKey("left shift"))
+        if(isGrounded && Input.GetKey("left shift") && Input.GetKey("w"))
         {
             speed = sprintingSpeed;
         }

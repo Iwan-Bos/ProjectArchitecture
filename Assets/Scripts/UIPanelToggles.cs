@@ -17,6 +17,7 @@ public class UIPanelToggles : MonoBehaviour {
         CreditsPanel.SetActive(false);
     }
     private void Update() {
+
         // Only recieve input when in the game.
         if (SceneManager.GetActiveScene () == SceneManager.GetSceneByBuildIndex (1))
         {
@@ -26,8 +27,9 @@ public class UIPanelToggles : MonoBehaviour {
                 if (EscapeToggle) {  
 
                     MainPanel.SetActive(true);
-                    Time.timeScale = 0.0f;
 
+                    Cursor.lockState = CursorLockMode.None;
+                    Time.timeScale = 0.0f;
                     EscapeToggle = false;
                 } 
                 else {
@@ -35,38 +37,44 @@ public class UIPanelToggles : MonoBehaviour {
                     MainPanel.SetActive(false);
                     OptionsPanel.SetActive(false);
                     CreditsPanel.SetActive(false);
-                    Time.timeScale = 1.0f;
                     
+                    Cursor.lockState = CursorLockMode.Locked;
+                    Time.timeScale = 1.0f;
                     EscapeToggle = true;
                 }
-
             }
+
         }
     }
     
     // UI Toggles ;
     // Main panel
     public void CloseMainPanel() { 
+        
         MainPanel.SetActive(false); 
         EscapeToggle = true;    
     }
      // Options panel
     public void OpenOptions() {  
+        
         MainPanel.SetActive(false);
         OptionsPanel.SetActive(true);
     }
     public void CloseOptions() {
-            OptionsPanel.SetActive(false);
-            MainPanel.SetActive(true);
+
+        OptionsPanel.SetActive(false);
+        MainPanel.SetActive(true);
     }
     // Credits panel
     public void OpenCredits() {
-            MainPanel.SetActive(false);
-            CreditsPanel.SetActive(true);
+
+        MainPanel.SetActive(false);
+        CreditsPanel.SetActive(true);
     }
     public void CloseCredits() {
-            CreditsPanel.SetActive(false);
-            MainPanel.SetActive(true);
+
+        CreditsPanel.SetActive(false);
+        MainPanel.SetActive(true);
     }
     
     // Misc UI Functions ;
@@ -92,7 +100,6 @@ public class UIPanelToggles : MonoBehaviour {
 
         Time.timeScale = 1.0f;
         SceneManager.LoadScene(0);
-
     }
 
 }
