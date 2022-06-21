@@ -6600,7 +6600,7 @@ MonoBehaviour:
     m_Bits: 64
   staminaFactor: 0.5
   staminaBar: {fileID: 1599378275}
-  staminaTimerValue: 3
+  staminaTimerValue: 50
 --- !u!143 &1739920042
 CharacterController:
   m_ObjectHideFlags: 0
