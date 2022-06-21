@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // movement stuff ↓↓
     public CharacterController controller;
-
     public float speed = 12f;
     public float walkSpeed = 12f;
     public float sprintingSpeed = 24f;
@@ -20,12 +20,14 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
 
     // stamina bar stuff ↓↓
-    public float staminaFactor;
+    public float regenFactor;
+    public float reduceFactor;
     public GameObject staminaBar;
     private UnityEngine.UI.Slider staminaSlider;
-    private float staminaTimer = 0f;
-    public float staminaTimerValue;
+    private float staminaTimer;
+    public float staminaDelay;
 
+    // called before the first frame update
     private void Start() 
     {
         staminaSlider = staminaBar.GetComponent<UnityEngine.UI.Slider>();
@@ -54,34 +56,33 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // stamina timer
-        staminaTimer -= Time.deltaTime;
+        staminaTimer += Time.deltaTime;
         Debug.ClearDeveloperConsole();
-        Debug.Log(staminaTimer);
+        Debug.Log(staminaSlider.value);
 
         // when on ground
         if (isGrounded) 
         {
             // when shift and w is held
-            if (Input.GetKey("left shift") && Input.GetKey("w")) {
+            if (Input.GetKey("left shift") && Input.GetKey("w") && staminaSlider.value != 0) {
             
+                staminaTimer = 0f;
+
                 // sprint
                 speed = sprintingSpeed; 
                 
                 // reduce stamina
-                staminaSlider.value -= staminaFactor * Time.deltaTime ;
+                staminaSlider.value -= reduceFactor * Time.deltaTime;
             }
-            
-            // when not holding shif and w
             else {
-
+                
                 // walk
                 speed = walkSpeed;
 
-                // wait && regen until shift is held again
-                if (staminaTimer <= 0) {
-                    
+                if (staminaTimer >= staminaDelay) {
+
                     // regen stamina
-                    staminaSlider.value += staminaFactor * Time.deltaTime;
+                    staminaSlider.value += regenFactor * Time.deltaTime;
                 }
             }
         }
