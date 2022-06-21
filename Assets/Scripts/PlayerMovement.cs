@@ -20,9 +20,16 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
 
     // stamina bar stuff ↓↓
-    bool hasStamina;
-    public int staminaFactor;
-    public Component staminaBar;
+    public float staminaFactor;
+    public GameObject staminaBar;
+    private UnityEngine.UI.Slider staminaSlider;
+    private float staminaTimer = 0f;
+    public float staminaTimerValue;
+
+    private void Start() 
+    {
+        staminaSlider = staminaBar.GetComponent<UnityEngine.UI.Slider>();
+    }
 
 
     // Update is called once per frame
@@ -46,21 +53,41 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
-        // sprinting
-        if (isGrounded && Input.GetKey("left shift") && Input.GetKey("w") && hasStamina) {
-        
-            speed = sprintingSpeed; 
-            // staminaBar.value = staminaBar.value + staminaFactor * Time.deltaTime ;
-        }
-        else { 
-        
-            speed = walkSpeed; 
-            // staminaBar.value = staminaBar.value + staminaFactor * Time.deltaTime ;
+        // stamina timer
+        staminaTimer -= Time.deltaTime;
+        Debug.ClearDeveloperConsole();
+        Debug.Log(staminaTimer);
+
+        // when on ground
+        if (isGrounded) 
+        {
+            // when shift and w is held
+            if (Input.GetKey("left shift") && Input.GetKey("w")) {
+            
+                // sprint
+                speed = sprintingSpeed; 
+                
+                // reduce stamina
+                staminaSlider.value -= staminaFactor * Time.deltaTime ;
+            }
+            
+            // when not holding shif and w
+            else {
+
+                // walk
+                speed = walkSpeed;
+
+                // wait && regen until shift is held again
+                if (staminaTimer <= 0) {
+                    
+                    // regen stamina
+                    staminaSlider.value += staminaFactor * Time.deltaTime;
+                }
+            }
         }
 
         // moving 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
-
 } 
