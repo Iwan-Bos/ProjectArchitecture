@@ -51,8 +51,10 @@ public class UIPanelToggles : MonoBehaviour {
     // Main panel
     public void CloseMainPanel() { 
         
+        Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1.0f;
         MainPanel.SetActive(false); 
-        EscapeToggle = true;    
+        EscapeToggle = true;
     }
      // Options panel
     public void OpenOptions() {  
@@ -97,9 +99,8 @@ public class UIPanelToggles : MonoBehaviour {
     }
 
     public void ReturnToMenu() {
-        
+
         Time.timeScale = 1.0f;
         SceneManager.LoadScene(0);
     }
-
 }
