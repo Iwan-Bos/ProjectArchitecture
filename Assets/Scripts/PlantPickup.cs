@@ -6,8 +6,9 @@ using UnityEngine;
 public class PlantPickup : MonoBehaviour
 {
 
-	
-	public GameObject plant1;
+
+	string[] myPlantArray = { "Plant1", "Plant2", "Plant3", "Plant4", "Plant5", "Plant6", "Plant7", "Plant8" };
+	public GameObject[] plants;
 	private bool carrying = false;
 
 
@@ -20,17 +21,23 @@ public class PlantPickup : MonoBehaviour
 			{
 				//carrying coderen voor meer dan 2 planten
 
-				plant1.SetActive(true);
+				plants.SetActive(true);
 				carrying = true;
 				Console.WriteLine("You're carrying plant 1.");
 			}
 
 			else
 			{
-				plant1.SetActive(false);
+				plants.SetActive(false);
 				Console.WriteLine("You cannot carry more items.");
 			}
 		}
+	}
+
+	private void Start()
+	{
+		plants = GameObject.FindGameObjectsWithTag("Plant");
+
 	}
 }
 
