@@ -21,14 +21,14 @@ public class PlantPickup : MonoBehaviour
 			{
 				//carrying coderen voor meer dan 2 planten
 
-				plants.SetActive(true);
+				myPlantArray[i].SetActive(true);
 				carrying = true;
-				Console.WriteLine("You're carrying plant 1.");
+				Console.WriteLine("You're carrying a plant.");
 			}
 
 			else
 			{
-				plants.SetActive(false);
+				myPlantArray[i].SetActive(false);
 				Console.WriteLine("You cannot carry more items.");
 			}
 		}
