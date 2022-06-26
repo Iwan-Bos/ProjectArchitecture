@@ -7,36 +7,54 @@ public class PlantPickup : MonoBehaviour
 {
 
 
-	string[] myPlantArray = { "Plant1", "Plant2", "Plant3", "Plant4", "Plant5", "Plant6", "Plant7", "Plant8" };
-	public GameObject[] plants;
-	private bool carrying = false;
+
+
+	public GameObject[] myPlantArray = new GameObject[8];
+	private static bool carrying = false;
 
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if (!carrying)
+		Debug.Log(PlantPickup.carrying);
+		if (!PlantPickup.carrying)
 		{
-
 			if (other.CompareTag("Player"))
 			{
-				//carrying coderen voor meer dan 2 planten
+	
+			
+				GameObject plant = this.gameObject;
+				
 
-				myPlantArray[i].SetActive(true);
-				carrying = true;
-				Console.WriteLine("You're carrying a plant.");
-			}
-
-			else
-			{
-				myPlantArray[i].SetActive(false);
-				Console.WriteLine("You cannot carry more items.");
+				
+				//carrying coderen voor 1 plant
+				plant.SetActive(false);
+				PlantPickup.carrying = true;
+					Debug.Log("You're carrying a plant.");
+					
+						
+				//}
 			}
 		}
+
+		else
+			{
+	
+	//			//carrying coderen voor meer dan 2 planten
+	
+			Debug.Log("You cannot carry more items.");
+				
+
+			}
+
+
+		
 	}
 
 	private void Start()
 	{
-		plants = GameObject.FindGameObjectsWithTag("Plant");
+	
+		myPlantArray = GameObject.FindGameObjectsWithTag("plant");
+		
 
 	}
 }
