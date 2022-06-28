@@ -6,31 +6,56 @@ using UnityEngine;
 public class PlantPickup : MonoBehaviour
 {
 
-	
-	public GameObject plant1;
-	private bool carrying = false;
+
+
+
+	public GameObject[] myPlantArray = new GameObject[8];
+	private static bool carrying = false;
 
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if (!carrying)
+		Debug.Log(PlantPickup.carrying);
+		if (!PlantPickup.carrying)
 		{
-
 			if (other.CompareTag("Player"))
 			{
-				//carrying coderen voor meer dan 2 planten
+	
+			
+				GameObject plant = this.gameObject;
+				
 
-				plant1.SetActive(true);
-				carrying = true;
-				Console.WriteLine("You're carrying plant 1.");
-			}
-
-			else
-			{
-				plant1.SetActive(false);
-				Console.WriteLine("You cannot carry more items.");
+				
+				//carrying coderen voor 1 plant
+				plant.SetActive(false);
+				PlantPickup.carrying = true;
+					Debug.Log("You're carrying a plant.");
+					
+						
+				
 			}
 		}
+
+		else
+			{
+	
+	//			//carrying coderen voor meer dan 2 planten
+	
+			Debug.Log("You cannot carry more items.");
+				
+
+			}
+
+
+		
+	}
+
+	private void Start()
+	{
+	
+		myPlantArray = GameObject.FindGameObjectsWithTag("plant");
+		
+
 	}
 }
 
