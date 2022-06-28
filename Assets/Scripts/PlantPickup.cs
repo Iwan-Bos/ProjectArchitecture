@@ -32,7 +32,7 @@ public class PlantPickup : MonoBehaviour
 					Debug.Log("You're carrying a plant.");
 					
 						
-				//}
+				
 			}
 		}
 
