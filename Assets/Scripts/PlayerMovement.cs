@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     // movement stuff ↓↓
+    [Header("Movement stuff")]
     public CharacterController controller;
     public float speed = 12f;
     public float walkSpeed = 12f;
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
 
     // stamina bar stuff ↓↓
+    [Header("Stamina stuff")]
     public float regenFactor;
     public float reduceFactor;
     public GameObject staminaBar;
