@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
         // stamina timer
         staminaTimer += Time.deltaTime;
         Debug.ClearDeveloperConsole();
-        Debug.Log(staminaSlider.value);
+        //Debug.Log(staminaSlider.value);
 
         // when on ground
         if (isGrounded) 
@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
                 if (staminaTimer >= staminaDelay) {
 
                     // regen stamina
-                    staminaSlider.value += regenFactor * Time.deltaTime;
+                    //staminaSlider.value += regenFactor * Time.deltaTime;
                 }
             }
         }
