@@ -228,7 +228,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 157988473}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2848eb8d1bb6a94685a1c31916dc0be, type: 3}
+  m_Script: {fileID: 11500000, guid: 43e0d02466db7854c97344cd6cc86e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   plantArray:
@@ -345,7 +345,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 412554415}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2848eb8d1bb6a94685a1c31916dc0be, type: 3}
+  m_Script: {fileID: 11500000, guid: 43e0d02466db7854c97344cd6cc86e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   plantArray:
@@ -543,7 +543,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 548223375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2848eb8d1bb6a94685a1c31916dc0be, type: 3}
+  m_Script: {fileID: 11500000, guid: 43e0d02466db7854c97344cd6cc86e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   plantArray:
@@ -690,7 +690,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 672639164}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2848eb8d1bb6a94685a1c31916dc0be, type: 3}
+  m_Script: {fileID: 11500000, guid: 43e0d02466db7854c97344cd6cc86e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   plantArray:
@@ -807,7 +807,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 897839624}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2848eb8d1bb6a94685a1c31916dc0be, type: 3}
+  m_Script: {fileID: 11500000, guid: 43e0d02466db7854c97344cd6cc86e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   plantArray:
@@ -924,7 +924,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1009943514}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2848eb8d1bb6a94685a1c31916dc0be, type: 3}
+  m_Script: {fileID: 11500000, guid: 43e0d02466db7854c97344cd6cc86e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   plantArray:
@@ -982,8 +982,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b319820f274c24a96cae82a8169ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 100
-  playerBody: {fileID: 1563819258}
 --- !u!114 &1184104293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1212,7 +1210,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1563819255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fafc184cfc19a34198d39f11954ae00, type: 3}
+  m_Script: {fileID: 11500000, guid: 29e11fc289d3cb84abe090ea549b33a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1563819257}
@@ -1225,7 +1223,7 @@ MonoBehaviour:
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   regenFactor: 0
   reduceFactor: 0
   staminaBar: {fileID: 0}
@@ -1463,7 +1461,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1571864383}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2848eb8d1bb6a94685a1c31916dc0be, type: 3}
+  m_Script: {fileID: 11500000, guid: 43e0d02466db7854c97344cd6cc86e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   plantArray:
