@@ -32,7 +32,9 @@ public class PlayerMovement : MonoBehaviour
     // called before the first frame update
     private void Start() 
     {
+        // stamina stuff
         staminaSlider = staminaBar.GetComponent<UnityEngine.UI.Slider>();
+        staminaBar.SetActive(true);
     }
 
 
@@ -59,8 +61,6 @@ public class PlayerMovement : MonoBehaviour
 
         // stamina timer
         staminaTimer += Time.deltaTime;
-        Debug.ClearDeveloperConsole();
-        //Debug.Log(staminaSlider.value);
 
         // when on ground
         if (isGrounded) 
@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
                 if (staminaTimer >= staminaDelay) {
 
                     // regen stamina
-                    //staminaSlider.value += regenFactor * Time.deltaTime;
+                    staminaSlider.value += regenFactor * Time.deltaTime;
                 }
             }
         }
