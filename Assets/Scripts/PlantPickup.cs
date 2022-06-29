@@ -8,6 +8,7 @@ public class PlantPickup : MonoBehaviour
 
 	public GameObject[] plantArray = new GameObject[8];
 	private static bool carrying = false;
+	public GameObject plant_dropped;
 
 
 	private void OnTriggerEnter(Collider other)
@@ -40,5 +41,30 @@ public class PlantPickup : MonoBehaviour
 	{
 	
 		plantArray = GameObject.FindGameObjectsWithTag("plant");
+	}
+
+	private void drop()
+	{
+		if (Input.GetKeyDown(KeyCode.Q) && carrying == true)
+		{
+			carrying = false;
+			GameObject plant = this.gameObject;
+			if (plant.activeSelf == true)
+			{
+				plant.SetActive(false);
+				plant = null; 
+				plant_dropped = Instantiate(plant_dropped, transform.position, Quaternion.identity); 
+
+			  }
+		}
+	}
+	
+	private void OnTriggerExit(Collider collision)
+	{
+		if (collision.CompareTag("plant"))
+		{
+			
+
+		}
 	}
 }
