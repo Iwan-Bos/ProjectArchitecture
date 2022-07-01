@@ -9,6 +9,7 @@ public class PlantPickup : MonoBehaviour
 	public GameObject[] plantArray = new GameObject[8];
 	private static bool carrying = false;
 	public GameObject plant_dropped;
+	bool plant_scanner;
 
 
 	private void OnTriggerEnter(Collider other)
@@ -26,6 +27,7 @@ public class PlantPickup : MonoBehaviour
 				plant.SetActive(false);
 				PlantPickup.carrying = true;
 				Debug.Log("You're carrying a plant.");
+				plant_scanner = true;
 			}
 		}
 
@@ -63,7 +65,7 @@ public class PlantPickup : MonoBehaviour
 	{
 		if (collision.CompareTag("plant"))
 		{
-			
+			plant_scanner = false;
 
 		}
 	}
