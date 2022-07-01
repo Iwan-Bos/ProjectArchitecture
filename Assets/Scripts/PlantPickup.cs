@@ -10,6 +10,8 @@ public class PlantPickup : MonoBehaviour
 	private static bool carrying = false;
 	public GameObject plant_dropped;
 	bool plant_scanner;
+	public static GameObject plant_pickedup;
+
 
 
 	private void OnTriggerEnter(Collider other)
@@ -28,6 +30,8 @@ public class PlantPickup : MonoBehaviour
 				PlantPickup.carrying = true;
 				Debug.Log("You're carrying a plant.");
 				plant_scanner = true;
+				plant_pickedup = plant;
+
 			}
 		}
 
@@ -45,19 +49,28 @@ public class PlantPickup : MonoBehaviour
 		plantArray = GameObject.FindGameObjectsWithTag("plant");
 	}
 
+	private void Update()
+	{
+
+		this.drop();
+	}
+
 	private void drop()
 	{
-		if (Input.GetKeyDown(KeyCode.Q) && carrying == true)
+		if (Input.GetKeyDown(KeyCode.Q) && PlantPickup.carrying == true)
 		{
-			carrying = false;
-			GameObject plant = this.gameObject;
-			if (plant.activeSelf == true)
-			{
-				plant.SetActive(false);
-				plant = null; 
-				plant_dropped = Instantiate(plant_dropped, transform.position, Quaternion.identity); 
+			Debug.Log("drop");
 
-			  }
+				GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+				plant_pickedup.SetActive(true);
+				plant_pickedup.transform.position = new Vector3(playerObj.transform.position.x, plant_pickedup.transform.position.y , playerObj.transform.position.z+4);
+			
+				plant_pickedup = null;
+				PlantPickup.carrying = false;
+	
+
+
+			//  }
 		}
 	}
 	

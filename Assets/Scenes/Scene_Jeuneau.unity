@@ -240,6 +240,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  plant_dropped: {fileID: 0}
 --- !u!1 &412554415
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +358,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  plant_dropped: {fileID: 0}
 --- !u!1 &414807583
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,6 +557,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  plant_dropped: {fileID: 0}
 --- !u!1 &593944230
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,6 +705,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  plant_dropped: {fileID: 0}
 --- !u!1 &897839624
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,6 +823,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  plant_dropped: {fileID: 0}
 --- !u!1 &1009943514
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,6 +941,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  plant_dropped: {fileID: 0}
 --- !u!1 &1184104290
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,7 +970,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184104290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.12, y: 0.69, z: 0}
+  m_LocalPosition: {x: 0.12, y: 1.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1563819258}
@@ -1183,6 +1189,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  plant_dropped: {fileID: 0}
 --- !u!1 &1563819255
 GameObject:
   m_ObjectHideFlags: 0
@@ -1473,6 +1480,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  plant_dropped: {fileID: 0}
 --- !u!1 &1985358040
 GameObject:
   m_ObjectHideFlags: 0
